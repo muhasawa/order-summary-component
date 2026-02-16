@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* :root is a global CSS variable.  */
+:root {
+    /* CSS variables are creates as follows. -- followed by name */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+.card {
+    width: 450px;
+    background-color: white;
+    color:var(--dark-blue);
+    border-radius:20px;
+    /* overflor:hidden simply shows the curved path which was missing top */
+    overflow:hidden;
+    margin:50px auto;
+    
+}
+
+.child {
+    color:red;
+}
+
+body {
+    background-image:url(./images/pattern-background-desktop.svg);
+    /* we will be using the CSS variable we created in the background color */
+    background-color: var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Red Hat Display", sans-serif;
+
+}
+
+.title {
+    color:var(--dark-blue);
+    font-weight: 900;
+    font-size:32px;
+}
+
+.hero-image {
+    /* we set this 100% so that the picture takes the full width of the card. In the SVG file, we removed
+       the width attribute since it would create issues in varying screen sizes. */
+    width:100%;
+}
+
+.container {
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* it means all the children of the .container class will have the properties defined */
+.container > * {
+    margin:13px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing:border-box simply fits the padding into the specified width of parent which is card in this context */
+    box-sizing: border-box;
+
+}
+
+.order-description {
+    line-height: 25px;
+}
+
+.proceed-button {
+    background-color: var(--bright-blue);
+    padding:1rem 0;
+    color:white;
+    box-shadow: 0 20px 30px -8px rgb(197 189 245);
+    width: 100%;
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+    font-size:0.9rem;
+    border-radius:12px; 
+
+}
+
+.proceed-button:hover {
+    opacity: 0.8;
+}
+
+.cancel-button {
+     background-color: white;
+     color:var(--desaturated-blue);
+     border:none;
+     margin-top:22px;
+     width:100%;
+     font-weight:700;
+     font-size:0.9rem;
+     cursor:pointer;
+     font-size:0.9rem;
+     border-radius:12px; 
+}
+
+.cancel-button:hover {
+    color:black;
+}
+
+.plan-container {
+    font-size:16px;
+    background-color: var(--very-pale-blue);
+    padding:25px;
+    border-radius:12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.plan-container a {
+    color:var(--bright-blue);
+    font-size:13px;
+    font-weight: 700;
+}
+
+.plan-container a:hover {
+    opacity:0.8;
+    text-decoration: none;
+}
+
+.plan-container strong {
+    color:var(--dark-blue);
+}
+
+.plan-description {
+    line-height: 20px;
+    margin-right:75px;
+    
+}
